@@ -85,22 +85,37 @@
           <p>This website includes content about student's scholarship records. It stores relevant student information, 
           generates scholarship reports, and notifies status through SMS. It also provides access to all approved scholars.</p>
 
-          <?php
-            if(!isset($_SESSION['id'])) {
-              echo "
-            		<div class='row'>
-            			<div class='col-md-4 order-md-2'>
-      		          <form class='form-signin' action='create_account.php'>
-        			        <button class='btn btn-lg btn-success btn-block' type='submit'>Not yet registered? Sign in</button>
-        			      </form>
-      			  	  </div>
-            		</div>
-              ";
-            }
-          ?>
+          <div class="row">
+            <div class="col-md-4 order-md-2">
+              <button type="button" class="btn btn-lg btn-success btn-block" data-toggle="modal" data-target="#myModal">
+                  Not yet registered? Sign in
+              </button>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
+            
       <div class="container">
         <div class="row">
           <div class="col-md-4">
